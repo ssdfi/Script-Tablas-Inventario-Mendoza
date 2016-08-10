@@ -37,6 +37,7 @@ CSV.open(File.join(root_dir, 'resultado.csv'), "wb") do |csv|
     'poda_rodal', 'raleo_rodal', 'id_uso', 'edad', 'id_estado_muestra',
     'id_cond_muestra', 'id_rechazo', 'fecha', 'id_origen',
     'id_parcela', 'id_distritos', 'id_cond_parcela',
+    'latitud', 'longitud',
     'nro_plantas', 'promedio', 'maximo', 'minimo',
     'volumen', 'altura promedio', 'archivo']
 
@@ -67,6 +68,8 @@ CSV.open(File.join(root_dir, 'resultado.csv'), "wb") do |csv|
     data << clearData(sheet.row(5)[1])
     data << clearData(sheet.row(5)[2])
     data << clearData(sheet.row(5)[4])
+    data << clearData(sheet.row(5)[6])
+    data << clearData(sheet.row(5)[7])
 
     volumen = 'N/A'
     row_number = 0
